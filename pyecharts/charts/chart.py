@@ -148,13 +148,28 @@ class Chart(Base):
         dimensions: types.Optional[types.Sequence] = None,
         source_header: types.Optional[bool] = None,
     ):
+        dataset = self.options.get("dataset", [])
         self.options.update(
-            dataset={
+            dataset=[*dataset, {
                 "source": source,
                 "dimensions": dimensions,
-                "sourceHeader": source_header,
-            }
+                "sourceHeader": source_header
+            }]
         )
+        return self
+
+    def add_transform(
+        self,
+        transform: dict = None
+    ):
+        dataset = self.options.get("dataset", None)
+        assert dataset != None
+        self.options.update(
+            dataset=[*dataset, {
+                "transform": transform
+            }]
+        )
+
         return self
 
 

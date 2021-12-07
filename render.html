@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="./ecStat.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/themes/vintage.js"></script>
+
+</head>
+<body>
+    <div id="5b3a3849272f4222bc1b652b4efff805" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_5b3a3849272f4222bc1b652b4efff805 = echarts.init(
+            document.getElementById('5b3a3849272f4222bc1b652b4efff805'), 'vintage', {renderer: 'canvas'});
+            echarts.registerTransform(ecStat.transform.regression);
+        var option_5b3a3849272f4222bc1b652b4efff805 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "scatter",
+            "xAxisIndex": 0,
+            "yAxisIndex": 0,
+            "symbolSize": 6,
+            "label": {
+                "show": false,
+                "position": "top",
+                "margin": 8
+            },
+            "encode": {
+                "x": "Income",
+                "y": "Life Expectancy",
+                "tooltip": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            }
+        },
+        {
+      name: 'line',
+      type: 'line',
+      smooth: true,
+      datasetIndex: 1,
+      symbolSize: 0.1,
+      symbol: 'circle',
+      label: { show: true, fontSize: 16 },
+      labelLayout: { dx: -20 },
+      encode: { label: 2, tooltip: 1 }
+    }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {
+                "": true
+            }
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "dataset": [
+        {
+            "source": [
+                [
+                    59,
+                    52
+                ],
+                [
+                    88,
+                    73
+                ],
+                [
+                    21,
+                    28
+                ],
+                [
+                    23,
+                    37
+                ],
+                [
+                    55,
+                    7
+                ],
+                [
+                    51,
+                    73
+                ],
+                [
+                    9,
+                    71
+                ],
+                [
+                    53,
+                    56
+                ],
+                [
+                    90,
+                    37
+                ],
+                [
+                    97,
+                    19
+                ],
+                [
+                    41,
+                    78
+                ],
+                [
+                    19,
+                    47
+                ],
+                [
+                    42,
+                    12
+                ],
+                [
+                    98,
+                    70
+                ],
+                [
+                    12,
+                    18
+                ],
+                [
+                    70,
+                    18
+                ],
+                [
+                    18,
+                    97
+                ],
+                [
+                    51,
+                    35
+                ],
+                [
+                    99,
+                    21
+                ],
+                [
+                    48,
+                    52
+                ]
+            ]
+        },
+        {
+            "transform": {
+                "type": "ecStat:regression",
+                "config": {
+                    "method": "exponential"
+                }
+            }
+        }
+    ]
+};
+        chart_5b3a3849272f4222bc1b652b4efff805.setOption(option_5b3a3849272f4222bc1b652b4efff805);
+    </script>
+</body>
+</html>
